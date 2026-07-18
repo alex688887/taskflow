@@ -24,7 +24,7 @@
             --col-retard: #ef4444;
             --col-avance: #3b82f6;
             --col-orange-alert: #f97316;
-            /* Couleurs des utilisateurs (Par défaut) */
+            /* Couleurs des utilisateurs (Par dÃ©faut) */
             --col-user1: #3b82f6;
             --col-user2: #ec4899;
             --col-both: #a855f7;
@@ -851,11 +851,11 @@
             position: relative;
             align-items: center;
         }
-        /* FIX CSS: Position du bouton avatar Liste Année */
-        .bucket-input-row .btn-avatar { top: 40%; /* Positionné un peu plus haut que 50% */ }
+        /* FIX CSS: Position du bouton avatar Liste AnnÃ©e */
+        .bucket-input-row .btn-avatar { top: 40%; /* PositionnÃ© un peu plus haut que 50% */ }
         .bucket-list { flex: 1; overflow-y: auto; border-top: 1px solid #333; padding-top: 10px; }
         /* FIX CSS: Recurrence Modal Input Zone */
-        .input-zone.modal-input-zone .btn-avatar { right: 10px; top: 40%; /* Remonté légèrement */ }
+        .input-zone.modal-input-zone .btn-avatar { right: 10px; top: 40%; /* RemontÃ© lÃ©gÃ¨rement */ }
         /* RECURRENCE UI */
         .rec-type-group {
             display: flex;
@@ -1182,7 +1182,7 @@
                     <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
                 </button>
                 <div class="nav-pills">
-                    <button class="nav-btn" onclick="changePeriod(-1)" title="Jour Precedent" aria-label="Jour précédent"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+                    <button class="nav-btn" onclick="changePeriod(-1)" title="Jour Precedent" aria-label="Jour prÃ©cÃ©dent"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
                     <input type="date" class="date-input" id="datePicker" onchange="pickDate(this.value)" aria-label="Choisir la date">
                     <button class="nav-btn" onclick="goToNow()" aria-label="Aujourd'hui">NOW</button>
                     <button class="nav-btn" onclick="changePeriod(1)" title="Jour Suivant" aria-label="Jour suivant"><svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -1224,7 +1224,7 @@
                         Recurrences
                     </button>
                     <div class="settings-container">
-                        <button class="btn-sys" id="settingsBtn" onclick="toggleSettingsMenu()" style="border-color: #666;" aria-label="Paramètres">
+                        <button class="btn-sys" id="settingsBtn" onclick="toggleSettingsMenu()" style="border-color: #666;" aria-label="ParamÃ¨tres">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1 1 1 0 0 0 1-1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1Z"></path></svg>
                         </button>
                         <div class="settings-menu" id="settingsMenu">
@@ -1487,7 +1487,7 @@
                             <div class="pie-chart" id="pieChartStatus"></div>
                             <div style="margin-top:10px; font-size:0.8rem; display:flex; gap:10px;">
                                 <span style="color:var(--col-done)">? Fait</span>
-                                <span style="color:var(--primary)">• A faire</span>
+                                <span style="color:var(--primary)">Â• A faire</span>
                             </div>
                         </div>
                         <div class="chart-box">
@@ -2636,7 +2636,7 @@
             const todo = todos.length - done;
             const pct = todo ? Math.round((done/(done+todo))*100) : 0;
             document.getElementById('pieChartStatus').style.background = 'conic-gradient(var(--col-done) 0% ' + pct + '%, var(--primary) ' + pct + '% 100%)';
-            document.querySelector('#pieChartStatus + div').innerHTML = '<span style="color:var(--col-done)">? Fait (' + done + ')</span> <span style="color:var(--primary)">• A faire (' + todo + ')</span>';
+            document.querySelector('#pieChartStatus + div').innerHTML = '<span style="color:var(--col-done)">? Fait (' + done + ')</span> <span style="color:var(--primary)">Â• A faire (' + todo + ')</span>';
             const countUser1 = todos.filter(t => t.assignee === 'user1').length;
             const countUser2 = todos.filter(t => t.assignee === 'user2').length;
             const countBoth = todos.filter(t => t.assignee === 'both').length;
@@ -2762,7 +2762,7 @@
             const totalMins = totalEarlyMins + totalLateMins;
             const earlyPct = totalMins > 0 ? (totalEarlyMins / totalMins) * 100 : 50;
             const latePct = totalMins > 0 ? (totalLateMins / totalMins)* 100 : 50;
-            html += `<div class="time-balance-container"> <div class="balance-header"> <span>Equilibre Temps</span> <span>Total: ${formatTimeDifference(totalEarlyMins + totalLateMins)}</span> </div> <div class="balance-bar-track"> ${totalMins > 0 ?` <div class="balance-segment balance-early" style="width: ${earlyPct}%; overflow:hidden; white-space:nowrap;">${formatTimeDifference(totalEarlyMins)}</div> <div class="balance-segment balance-late" style="width: ${latePct}%; overflow:hidden; white-space:nowrap;">+${formatTimeDifference(totalLateMins)}</div `:` <div style="width:100%; color:#888; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">Pas assez de donnees</div `} </div> <div class="balance-labels"> <span class="text-green">Temps gagné : ${formatTimeDifference(totalEarlyMins)}</span> <span class="text-red">Temps perdu : ${formatTimeDifference(totalLateMins)}</span> </div> </div>` ;
+            html += `<div class="time-balance-container"> <div class="balance-header"> <span>Equilibre Temps</span> <span>Total: ${formatTimeDifference(totalEarlyMins + totalLateMins)}</span> </div> <div class="balance-bar-track"> ${totalMins > 0 ?` <div class="balance-segment balance-early" style="width: ${earlyPct}%; overflow:hidden; white-space:nowrap;">${formatTimeDifference(totalEarlyMins)}</div> <div class="balance-segment balance-late" style="width: ${latePct}%; overflow:hidden; white-space:nowrap;">+${formatTimeDifference(totalLateMins)}</div `:` <div style="width:100%; color:#888; display:flex; align-items:center; justify-content:center; font-size:0.8rem;">Pas assez de donnees</div `} </div> <div class="balance-labels"> <span class="text-green">Temps gagnÃ© : ${formatTimeDifference(totalEarlyMins)}</span> <span class="text-red">Temps perdu : ${formatTimeDifference(totalLateMins)}</span> </div> </div>` ;
             container.innerHTML = html;
         }
         function openEdit(id) {
@@ -2952,7 +2952,7 @@
                 } else {
                     checkHtml = '<div class="check-circle checked" style="border-color:var(--col-done)"></div>';
                 }
-                const attachIcon = (t.attachments && t.attachments.length > 0) ? '<div style="font-size:0.7rem; color:var(--col-auto); margin-top:2px;">?? Pièce(s) jointe(s)</div>' : '';
+                const attachIcon = (t.attachments && t.attachments.length > 0) ? '<div style="font-size:0.7rem; color:var(--col-auto); margin-top:2px;">?? PiÃ¨ce(s) jointe(s)</div>' : '';
                 let assigneeStyle = '';
                 if(t.assignee === 'user1') assigneeStyle = 'border-left:2px solid var(--col-user1); padding-left:5px;';
                 else if(t.assignee === 'user2') assigneeStyle = 'border-left:2px solid var(--col-user2); padding-left:5px;';
@@ -3276,7 +3276,7 @@
             saveData();
             updateAll();
             renderRecurrenceList();
-            showToast("Regle ajoutée");
+            showToast("Regle ajoutÃ©e");
         }
         function handleSearch(q) {
             document.getElementById('searchModal').style.display = 'flex';
@@ -3399,7 +3399,7 @@
             tempAttachments.forEach((f, i) => {
                 const div = document.createElement('div');
                 div.style.marginBottom = '2px';
-                div.innerHTML = '<span style="color:#ddd">?? ' + f + '</span> <span style="color:#dc2626; cursor:pointer; margin-left:5px;" onclick="removeAttachment(' + i + ')">×</span>';
+                div.innerHTML = '<span style="color:#ddd">?? ' + f + '</span> <span style="color:#dc2626; cursor:pointer; margin-left:5px;" onclick="removeAttachment(' + i + ')">Ã—</span>';
                 container.appendChild(div);
             });
         }
